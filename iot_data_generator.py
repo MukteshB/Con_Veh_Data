@@ -5,6 +5,7 @@ import json
 def generate_sensor_data():
     sensors = ['temperature', 'humidity', 'pressure', 'vibration']
     data = {
+        "topic": "project/topic",
         "sensor": random.choice(sensors),
         "value": round(random.uniform(10.0, 100.0), 2),
         "unit": "Celsius" if "temperature" else "%",
@@ -21,3 +22,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
